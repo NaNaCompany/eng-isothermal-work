@@ -1,0 +1,69 @@
+export const tool={
+  "id": "E076",
+  "slug": "eng-isothermal-work",
+  "title": "이상기체 등온팽창일 계산기",
+  "title_en": "Ideal Gas Isothermal Work Calculator",
+  "category": "열",
+  "category_en": "Thermodynamics",
+  "fields": [
+    {
+      "key": "n",
+      "label": "물질량 n",
+      "label_en": "Amount n",
+      "dimension": "amount",
+      "example": 1,
+      "constraint": "positive",
+      "display_unit": "mol",
+      "display_value": "1"
+    },
+    {
+      "key": "t",
+      "label": "절대온도 T",
+      "label_en": "Absolute temperature T",
+      "dimension": "temperature",
+      "example": 300,
+      "constraint": "positive",
+      "display_unit": "K",
+      "display_value": "300"
+    },
+    {
+      "key": "v1",
+      "label": "초기 부피 V₁",
+      "label_en": "Initial volume V₁",
+      "dimension": "volume",
+      "example": 0.01,
+      "constraint": "positive",
+      "display_unit": "L",
+      "display_value": "10"
+    },
+    {
+      "key": "v2",
+      "label": "최종 부피 V₂",
+      "label_en": "Final volume V₂",
+      "dimension": "volume",
+      "example": 0.02,
+      "constraint": "positive",
+      "display_unit": "L",
+      "display_value": "20"
+    }
+  ],
+  "result_label": "기체가 외부에 한 일 W",
+  "result_label_en": "Work done by the gas W",
+  "result_dimension": "energy",
+  "formula": "W = nRT ln(V₂/V₁)",
+  "purpose": "가역 등온 과정에서 이상기체가 한 압력-체적 일 계산",
+  "purpose_en": "Calculate reversible isothermal pressure-volume work done by an ideal gas.",
+  "assumptions": "n,T,V₁,V₂>0. 가역·준정적 등온 이상기체 모델이다. 팽창은 양수, 압축은 음수이며 열교환량을 추가 출력하지 않는다.",
+  "assumptions_en": "Required: positive inputs and a reversible quasistatic isothermal ideal-gas process. Work by the gas is positive for expansion and negative for compression. No additional heat output is returned.",
+  "sources": [
+    {
+      "label": "OpenStax · 3 3 first law of thermodynamics",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/3-3-first-law-of-thermodynamics"
+    }
+  ],
+  "condition": "",
+  "condition_en": "",
+  "site": "https://nanalab.kr/eng-isothermal-work/",
+  "repository": "https://github.com/NaNaCompany/eng-isothermal-work",
+  "output_unit": "J"
+};
